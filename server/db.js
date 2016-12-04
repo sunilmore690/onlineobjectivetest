@@ -1,6 +1,7 @@
 var mongoose = require('mongoose'),
     config = require('config');
 
+console.log('env',process.env)
 var dburl = config.OnlineObjectiveTest.dbUrl;
 if(process.env.NODE_ENV == 'production'){
  dburl = 'mongodb://user18Q:GBmM6Qpd0fdJnET2@172.30.246.214:27017/sampledb'
