@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 var dburl = config.OnlineObjectiveTest.dbUrl;
 if(process.env.MONGODB_USER){
- dburl = 'mongodb://'+process.env.MONGODB_USER+':'+process.env.MONGODB_PASSWORD+'@localhost:27017/'+process.env.MONGODB_DATABASE
+ dburl = 'mongodb://'+process.env.MONGODB_USER+':'+process.env.MONGODB_PASSWORD+'@'+process.env.OPENSHIFT_MONGODB_DB_HOST+':'+process.env.OPENSHIFT_MONGODB_DB_PORT+'/'+process.env.MONGODB_DATABASE
 }
 console.log('dburl',dburl)
 mongoose.connect(dburl);
