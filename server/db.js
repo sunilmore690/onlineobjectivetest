@@ -1,9 +1,10 @@
 var mongoose = require('mongoose'),
     config = require('config');
-
+console.log('env',process.env)
 var dburl = config.OnlineObjectiveTest.dbUrl;
-if(process.env.NODE_ENV == 'production'){
-dburl = 'mongodb://user18Q:GBmM6Qpd0fdJnET2@127.0.0.1:27017/sampledb'
+if (process.env.OPENSHIFT_MONGODB_DB_URL) {
+    url = process.env.OPENSHIFT_MONGODB_DB_URL +
+    process.env.OPENSHIFT_APP_NAME;
 }
 console.log('dburl',dburl)
 mongoose.connect(dburl);
