@@ -2,8 +2,8 @@ var mongoose = require('mongoose'),
     config = require('config');
 
 var dburl = config.OnlineObjectiveTest.dbUrl;
-if(process.env.MONGODB_USER){
- dburl = 'mongodb://'+process.env.MONGODB_USER+':'+process.env.MONGODB_PASSWORD+'@'+process.env.OPENSHIFT_MONGODB_DB_HOST+':'+process.env.OPENSHIFT_MONGODB_DB_PORT+'/'+process.env.MONGODB_DATABASE
+if(process.env.OPENSHIFT_NODEJS_IP){
+   dburl = 'mongodb://admin:Auz5nSHRGAXV@'+process.env.OPENSHIFT_MONGODB_DB_HOST+':'+process.env.OPENSHIFT_MONGODB_DB_PORT+'/noteshareandstick'
 }
 console.log('dburl',dburl)
 mongoose.connect(dburl);
