@@ -1,0 +1,46 @@
+{{#if notes.length}}
+{{#each notes}}
+  <div class="visible-xs trashnote ">
+  	<div class="panel panel-default">
+  	  <div class="panel-body">
+  	  	<div class='col-xs-8'>{{subject}}</div>
+  		 <div class='col-xs-2'>
+  		 	<a rel='Restore note' data-id='{{_id}}' class="restore"><i class="fa fa-history fa-lg"></i></a>
+  		 </div>
+  		 <div class='col-xs-2'>
+  		 	 <a rel='Restore note' data-id='{{_id}}' class="delete"><i class="fa fa-trash-o fa-lg"></i></a>
+  		 </div>
+  	  </div>
+  		 
+  	</div>
+ </div>
+  <div class="hidden-xs col-sm-4 trashnote">
+   <div class="panel panel-default">
+   		<div class="panel-body">
+  		 {{subject}}
+  	</div>
+  	<div class="panel-footer">
+
+  	 <div class="row">
+  	 			<span class="col-sm-6 " style="text-align:center" data-id='{{_id}}'>
+	     <a href='#' class="fa fa-history restore"  style="color:black" data-id={{_id}} ></a> Restore 
+             </span>
+       <span class="col-sm-6 " style="text-align:center;border-left-style: groove" id='userdelete' data-id='{{_id}}'>
+       	<a href='#' class="fa fa-trash-o delete"  style="color:red" data-id={{_id}}></a> Delete 
+       </span>
+  	 </div>
+  	
+  	</div>
+   </div>
+  
+
+  </div>
+ {{/each}}
+{{else}}
+ <div class="col-sm-3"></div>
+ <div class="col-sm-6">
+   <h2>No trash Notes</h2>
+ </div>
+ <div class="col-sm-3"></div>
+  
+{{/if}}

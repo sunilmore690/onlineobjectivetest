@@ -1,0 +1,46 @@
+<div class="col-sm-2 col-xs-12"></div>
+        <div class="col-sm-8 col-xs-12">
+            <form role="form" class="form-horizontal " >
+         
+          <div class="form-group">
+            <label  class="col-sm-3 control-label">First Name
+            </label>
+            <div class="col-sm-9">
+               <input type="text" class="form-control" name='namefirst' placeholder="First Name" value='{{name.first}}' />
+            </div>
+         </div>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Last Name
+            </label>
+            <div class="col-sm-9">
+               <input type="text" class="form-control" name='namelast' placeholder=' Last Name' value='{{name.last}}' />
+            </div>
+         </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="col-sm-3 control-label">
+                Password</label>
+            <div class="col-sm-9">
+             <div class="input-group">
+                <input type="password" class="form-control" name='password' placeholder="*******" value='{{password}}'/> 
+              <span class="input-group-addon showpassword" ><a href='#' style="color:black"><i class="fa fa-eye"></i></a></span>
+            </div>
+               
+            </div>
+        </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="col-sm-3 control-label">
+            Sex</label>
+            <div class="col-sm-9">
+               <label class="radio-inline"><input type="radio" name="sex" value='male' {{#when sex 'eq' 'male'}}checked{{/when}}>Male</label>
+               <label class="radio-inline"><input type="radio" name="sex" value="female" {{#when sex 'eq' 'female'}}checked{{/when}} >Female</label>
+            </div>
+          </div>
+          <div class='form-group'>
+            <input type="button" class="col-sm-offset-5 col-sm-4 btn btn-primary useredit hidden-xs" value="Save"/>
+            <input type="button" class="col-xs-offset-3 col-xs-6 btn btn-primary useredit visible-xs" value="Save"/>
+          </div>
+        
+         
+        </form>
+        </div>
+         <div class="col-sm-2 col-xs-12"></div>

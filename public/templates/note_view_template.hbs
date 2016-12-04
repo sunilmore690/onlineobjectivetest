@@ -1,0 +1,144 @@
+ 
+
+
+  <div class="modal-dialog editform" >
+     <div class="modal-content" {{#if isMobile}}{{else}}style='width:700px'{{/if}}>
+     <div>
+        {{#if note._id}}<a style="float:left;padding-left:10px;padding-top:5px;font-size:large" class="viewmode"><i class="glyphicon glyphicon-arrow-left"></i></a> {{/if}}
+        <button type="button" class="close " data-dismiss="modal" aria-hidden="true">
+     </div>
+     <br>
+   <div>
+    <form class="signupform" name='note-form'>
+       <div class="modal-body">
+        
+           <div class="form-group">
+            
+             <input type="text" class="form-control" id="exampleInputEmail1" name='subject' placeholder="Title" style="border:0;font-weight:800;background:#e6d67f;">
+           </div>
+           <div class="form-group">
+             <div class="textnote" ></div>
+             <textarea name="note" cols='50' rows="{{#if isMobile}}20{{else}}12{{/if}}" class="form-control textarea " style="border:0;resize:none ; background:#e6d67f" placeholder="Take a note" ></textarea> 
+           </div>
+          <div class="form-group">
+             <label class="col-sm-2 control-label">Label</label>
+             <div class="col-sm-10">
+                <select class="form-control selectlabels" name='notelabel'>
+                {{#each labels}}
+                  <option value="{{this}}">{{this}}</option>
+                {{/each}}
+                </select>
+             </div>
+          </div>
+         <div class="form-group">
+            <label  class="col-sm-2 control-label">
+            Reminder</label>
+            <div class="col-sm-10">
+               <label class="radio-inline"><input type="radio" name="remindershow" value='yes' {{#if note.reminder}}checked{{/if}}>Yes</label>
+               <label class="radio-inline"><input type="radio" name="remindershow" value='no' {{#if note.reminder}}{{else}}checked{{/if}}>No</label>
+            </div>
+          </div>
+         
+          <div class="form-group remindersection hide" style="display:none">
+              <label  class="col-sm-2 control-label inline">Google Clender <span><img src="/images/Google_Calendar.png" style="width:26px" /></span></label>
+
+              <div class="col-sm-10">
+                 <label class="radio-inline"><input type="radio" name="googleCalender" value='yes' {{#if note.googleCalender}}checked{{/if}}>Yes</label>
+                 <label class="radio-inline"><input type="radio" name="googleCalender" value='no' {{#if note.googleCalender}}{{else}}checked{{/if}}>No</label>
+              </div>
+            </div>
+          
+        
+           <div class="form-group remindersection hide">
+             
+
+              <div class='input-group date col-sm-10' id='datetimepicker1'>
+                  <input type='text' class="form-control"  name='reminder'/>
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+                </div>
+            </div>
+          <div class="form-group ">
+             
+             <div class="col-sm-offset-2 col-sm-10">
+              <input type="checkbox" checked data-toggle="toggle">
+               <input   type="file"  name='noteimage' class="file-loading input-4 col-sm-9">
+               
+             </div>
+             
+          </div>
+           
+           
+        
+       </div>
+       <div class="modal-footer" style="border-top:none;margin-top:10px">
+       <div class="col-sm-8 col-xs-6" style="padding-left:0px;padding-top:5x">
+     <!--     <span>{{#if note.created}} Created <span style="color:gray">{{getLocaleTime note.created}}</span>{{/if}}</span>
+       <span>{{#if note.updated}} Updated <span style="color:gray">{{getLocaleTime note.updated}}</span>{{/if}}</span> -->
+       </div>
+       
+        <div class="col-sm-4 col-xs-6" style="padding:0px">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         <button type="submit" class="btn btn-primary btn-inverse" >Done</button>
+        </div>
+         
+       </div>
+        </form> 
+        </div>
+     </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+   
+
+
+
+
+ <div class="modal-dialog viewnote ">
+ <div class="modal-content" {{#if isMobile}}{{else}}style='width:700px'{{/if}}>
+ 
+   <button type="button" class="close btn-lg " data-dismiss="modal" aria-hidden="true">
+   </button>
+   <div class="modal-body">
+   <div>
+      <button type="button" class="hidden-xs btn btn-warning btn-circle btn-lg editmode  pull-left" style="margin:5px"><i class="glyphicon glyphicon-pencil"></i></button>
+   </div>
+    
+     <div class="note-subject">
+       <h3 name='subject' style=""></h3>
+     </div>
+    {{!--  <div>
+       <img src="http://images.loksatta.com/2016/08/dance-bar.jpg" class="img img-responsive"/>
+     </div> --}}
+    <div class="note-content" style="overflow-x:auto">
+     <div class="row">
+        <div class="col-sm-6 col-xs-6">
+          <div><b>Created </b>: {{getLocaleTime note.created}}
+          </div>
+          <div>
+            {{#if note.updated}} <b>Updated</b> : {{getLocaleTime note.updated}} {{/if}}
+          </div> 
+        </div>
+       <div class="col-sm-6 col-xs-6">
+          {{#if note.reminder}}
+           <a href="#" style="color:green"><i class="fa fa-clock-o" aria-hidden="true"></i> {{getLocaleTime note.reminder}}</a>
+           {{/if}}
+            
+        </div>
+      </div>
+  
+    <div>
+      <p  style="text-align:justify">{{{note.content}}}</p>
+      
+    </div>
+      
+    </div>
+   
+  </div>
+  <div class="btn-edit-modal visible-xs">
+    <button type="button" class="btn btn-warning btn-circle btn-lg editmode" ><i class="glyphicon glyphicon-pencil"></i></button>
+  </div>
+ </div>
+  
+ </div>
+
+

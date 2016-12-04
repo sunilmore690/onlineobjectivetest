@@ -1,0 +1,41 @@
+<div class="modal-dialog ">
+ <div class="modal-content">
+   <div style="padding-top:20px">
+   	 <button type="button" class="close " data-dismiss="modal" aria-hidden="true">
+   </button>
+   </div>
+ 	
+ 	<div class='modal-header'>
+ 		<div>
+ 		  <div class="col-sm-9 col-xs-9">
+ 		  	 <input type="text" class="form-control labeltext"  placeholder="Enter label name" >
+ 		  </div>
+ 		  <div class="col-sm-3 col-xs-3">
+ 		  	<button class="btn btn-default addlabel" >Add</button>
+ 		  </div>
+ 		</div>
+ 		
+ 	</div>
+ 	<div class="modal-body">
+ 	  <div class="labellist">
+ 	  		<table class="table table-striped">
+			   
+		    <tbody>
+		    {{#each labels}}
+		       <tr>
+		        <td>{{this}}</td>
+		        <td>{{#when this 'eq' 'default'}}{{else}}<a class=" labeldelete" data-id='{{this}}' style="color:red"><i class="glyphicon glyphicon-trash"></i></a>{{/when}}</td>
+		        
+		      </tr>
+
+		     {{/each}}
+		      
+		    
+		    </tbody>
+		  </table>
+ 	  		
+ 	  </div>
+ 		
+ 		</div>
+ </div>
+</div>

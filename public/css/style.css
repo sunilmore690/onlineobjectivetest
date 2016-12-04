@@ -1,0 +1,349 @@
+tr { cursor: pointer; cursor: hand; }
+div#container{
+  width: 96%;
+  margin: 25px;
+  margin-top:70px;
+}
+body {
+	background:darkkhaki;
+  overflow-x: hidden;
+}
+.mobilenote{
+  padding-left: 5px;
+  /*padding-bottom: 5px;*/
+  padding-right: 5px;
+  
+}
+.grid-item { 
+  width: 250px;
+  height: 250px !important;
+  margin-bottom: 20px
+}
+.grid-item--height2 {
+  height: 200px !important;
+  width: 300px ;
+ }
+.grid-item--width2 { height: 150px;width: 200px }
+.grid-item--height2 .panel-body {
+  padding-bottom:51px;
+}
+.universal-loader {
+  display: none;
+  background-size: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -50px 0 0 -50px;
+  z-index: 999999;
+  background: url('/images/heart_loader.gif') center center no-repeat;
+  background-size: 70%;
+}
+.desktopnote {
+  background: url('/images/whiteimage.jpg');
+  height: 240px;
+  width: 230px;
+}
+body.loading .universal-loader {
+  display: block;
+}
+nav a{
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+}
+.nav-tabs {
+    margin-bottom: 15px;
+}
+.sign-with {
+    margin-top: 25px;
+    padding: 20px;
+}
+#notes{
+  padding-left: 15px;
+  height: 100%;
+  overflow-y:auto;
+}
+.modal-content  {
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important; 
+   
+    /*background:#e6d67f;*/
+}
+.page {
+	margin-top: 50px
+}
+.wysihtml5-sandbox {
+  height: 350px !important;
+}
+.map {
+      min-width: 300px;
+      min-height: 300px;
+      width: 100%;
+      height: 100%;
+  }
+
+  .header {
+      background-color: #F5F5F5;
+      color: #36A0FF;
+      height: 70px;
+      font-size: 27px;
+      padding: 10px;
+  }
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.addbtn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.btn-edit-modal {
+  float: right;
+  padding: 5px;
+  display: inline;
+}
+.btn-edit-modal .editmode {
+  position: fixed;
+  top: 85%;
+  right: 10px;
+}
+/*
+nav{
+						background: none repeat scroll 0 0 #000;
+font-size: 16px;
+height: 48px;
+margin-bottom: 10px;
+line-height: 22px;
+padding: 0 26px;
+width: 100%;
+box-shadow: 0 0 10px 0 #000000;
+    position: relative;
+    top: 0;
+}*/
+div.note div.useredit {
+	height: 200px;
+}
+div#notes div.note{
+
+  margin: 10px;
+  float: left;
+  height: 240px;
+  width: 230px;
+  /*background-color: #fff000;*/
+  float: left;
+  /*margin-right: 20px;*/
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  position: relative;
+  box-shadow: 10px 8px 5px ;
+  box-sizing: border-box;
+  opacity: 0.7;
+  background: url('/images/newstickynote.png');
+  /*transform: rotate(2deg);*/
+}
+
+#mobilenavbar {
+
+  z-index: 1000;
+  position: fixed;
+  left: -250px;
+  width: 260px;
+  height: 100% ;
+  flex-flow: column;
+  display: flex;
+  /*margin-left: -250px;*/
+  overflow-y: auto;
+  background: #323232!important;
+  overflow-y: scroll;
+  /*display: none*/
+}
+.modal-dialog .close {
+    width: 30px;
+    height: 30px;
+    background: url(/images/btn-modalclose.png) center no-repeat;
+    position: absolute;
+    right: 13px;
+    top: 9px;
+    opacity: .3;
+    z-index: 10;
+    outline: 0;
+}
+.labellist{
+  max-height: 300px;
+  overflow-y: auto;
+  font-weight: 900;
+  font-size: small;
+ 
+}
+#mobilenavbar ul {
+    
+    margin-top: 10px;
+    margin-left: 5px
+    padding: 0;
+    margin-bottom: 0;
+    
+}
+#mobilenavbar ul li{
+    
+  padding: 8px;
+  font-size: medium; 
+}
+
+
+@media only screen and (max-device-width: 768px) {
+   div#notes div.note{
+     height: 170px;
+     width: 160px;
+     background: url('/images/rsz_1rsz_2stickynote1.png');
+     margin:5px;
+   }
+ /*  .note-subject{
+    width: 700px;
+    overflow-x: auto;
+   }*/
+   .textnote{
+    overflow:auto;
+   }
+   /*.wysihtml5-toolbar{
+    width: 700px;
+   }*/
+   #notes {
+    padding-left: 8px;
+    padding-right: 8px;
+   }
+   .modal-content  {
+    width: 100%;
+   }
+   .modal-dialog {
+    margin:0;
+   }
+   .deleteicon{
+     left: 0px !important;
+   }
+   div.note div.useredit {
+	  height: 140px;
+   }
+   #mobilenavbar{
+    width: 255px
+   }
+   
+  }
+  @media only screen and (max-device-width: 500px) {
+   
+ #mobilenavbar{
+    width: 255px
+   }
+.notetime{
+  display: none;
+}
+
+  }
+
+/*div#notes div.note:nth-child(4n){
+  margin-right: 20px;
+}*/
+/*div#notes div.note:nth-child(2n){
+  background-color: coral;
+  box-shadow: 8px 8px 5px  ;
+}*/
+.deleteicon{
+  color:red;
+  font-size: 15px;
+  left: 5px;
+  margin-right: 5px;
+}
+
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+.note-operations {
+    bottom: 0;
+
+    font-size: 12px;
+    position: absolute;
+    text-align: right;
+    width: 85%;
+  
+}
+.note-label{
+  bottom: 5px;
+  left: 5px;
+ 
+  font-size: 12px;
+  position: absolute;
+  text-align: left;
+  /*width: 40%;*/
+  font-size:medium;
+}
+.noteshare{
+box-shadow: 10px 8px 5px;
+}
+.notecontent {
+
+}
+.notetime {
+  bottom: 2px;
+  font-size:12px;
+  color: black;
+  position: absolute;
+  text-align: left;
+}
+
+hr {
+  background-color: gray;
+  height: 1px;
+}
+div#notes div.note .note-content h1{
+  margin: 10px 0 10px 0;
+  font-size: 24px;
+}
+.dropdown-menu li {
+  padding: 5px;
+}
+div#notes div.note .note-content p{
+  font-family: 'Nothing You Could Do', cursive;
+  margin: 0;
+  min-height: 144px;
+}
+div#OR {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #C2C2C2;
+    border-radius: 50%;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    float: right;
+    position: absolute;
+    right: -16px;
+    top: 40%;
+    z-index: 1;
+    background: #DFDFDF;
+}
+
+.modal-content.close{
+  padding: 5px;
+}

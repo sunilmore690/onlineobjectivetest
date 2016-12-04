@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <title>Note Stick Share  </title>
+      <meta name='description' content='Not it.. Stick it.. Share it..'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/css/selectize.bootstrap3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+
+
+<link rel="stylesheet" type="text/css" href="http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/components/bootstrap/dist/css/bootstrap-theme.min.css"></link>
+
+<link rel="stylesheet" type="text/css" href="http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/dist/bootstrap3-wysihtml5.min.css"></link>
+
+      <link rel="stylesheet" href ="css/style.css">
+      <script src='js/libs/jquery/jquery.min.js'></script>
+     <script type="text/javascript" src="js/libs/jquery.touchSwipe.min.js"></script>
+      <script src="js/libs/jquery.growl.js" type="text/javascript"></script>
+      <link href="css/jquery.growl.css" rel="stylesheet" type="text/css" />
+      <script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+      <script src="js/libs/moment.js"></script>
+      <script type="text/javascript" src="js/libs/bootstrap_collapse.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.3/js/standalone/selectize.js"></script>
+      <link href="fileinput/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+     
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJAjh1ndym4KSldLN9QZDZMZixCuzyhLY"
+    async defer></script>
+    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+      <!-- canvas-to-blob.min.js is only needed if you wish to resize images before upload.
+           This must be loaded before fileinput.min.js -->
+      <script src="fileinput/js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+  
+      <!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview.
+           This must be loaded before fileinput.min.js -->
+      <script src="fileinput/js/plugins/sortable.min.js" type="text/javascript"></script>
+      <!-- purify.min.js is only needed if you wish to purify HTML content in your preview for HTML files.
+           This must be loaded before fileinput.min.js -->
+      <script src="fileinput/js/plugins/purify.min.js" type="text/javascript"></script>
+      <!-- the main fileinput plugin file -->
+      <script src="fileinput/js/fileinput.min.js"></script>
+   
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/css/bootstrap-datetimepicker.min.css" />
+       <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+
+   </head>
+   <body >
+   <div class="universal-loader"></div>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         
+      </nav>
+      >
+      <div class ="container">
+         <div class="page">
+            
+         </div>
+      </div>
+      <div class="modal fade" id='note-modal' role="dialog"></div>
+      <div class="modal fade" id='signup-modal' role="dialog"></div>
+      <div class="modal fade" id='share-note-modal' role="dialog"></div>
+      <div class="modal fade" id='label-view-modal' role="dialog"></div>
+      <div class="modal fade" id='filter-modal' role="dialog"></div>
+      <div class="modal fade" id='welcome-modal' role="dialog">
+         <div class="modal-dialog ">
+            <div class="modal-content">
+               <button type="button"  class="close btn btn-lg " data-dismiss="modal" aria-hidden="true">
+               </button>
+               <div class="modal-body">
+                  <p style="font-family:inherit">
+                     Thank You For Registering with us .Confirmation email has been  sent your email.Please click the verification link to verify your registered email address
+                  </p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+       <div class="hidden-xs" style="position:fixed;top:20px;right:0px">
+        <div data-WRID="WRID-147712465995932367" data-widgetType="Push Content"  data-class="affiliateAdsByFlipkart" height="600" width="120"></div>
+       </div>
+        <div class="visible-xs" style="position:fixed;bottom:0px">
+         <a href="http://dl.flipkart.com/dl//mochi-men-tan-sandals/p/itmegjhdnyrcgyzj?pid=SNDEGJHDF5FEWRXT&affid=sunilmore"><img src="http://img6a.flixcart.com/www/prod/images/buy_btn_1-b05fffbb.png"></a>
+       </div>
+
+
+       <script async src="https://affiliate.flipkart.com/affiliate/widgets/FKAffiliateWidgets.js"></script>
+
+     
+     <script src="http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/components/wysihtml5x/dist/wysihtml5x-toolbar.min.js"></script>
+
+<script src="http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/components/handlebars/handlebars.runtime.min.js"></script>
+<script src="http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/dist/bootstrap3-wysihtml5.min.js"></script>
+                                  
+  
+      <script src="js/libs/underscore/underscore-min.js"></script>
+      <script src="js/libs/backbone/backbone-min.js"></script>
+      <script src="js/libs/backbone/Backbone.ModelBinder-min.js"></script>
+      <script src="js/libs/handlebars/handlebars.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/js/bootstrap-datetimepicker.min.js"></script>
+      <script src="js/script.js"></script>
+      </script>  
+   </body>
+</html>

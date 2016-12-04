@@ -1,0 +1,16 @@
+ <div class="col-sm-3 col-xs-12"></div>
+  <div class="col-sm-6 col-xs-12">
+   {{#when status 'eq' 'success'}}
+    You've verified your account
+
+   {{else}}
+
+     Your verification token is expired or wrong . So please Click below  to send confirmation link again.
+     <br>
+    <a href="#" class='sendconfirmation'>Send Confirmation Link</a>
+
+   {{/when}}
+    
+    
+  </div>
+  <div class="col-sm-3"></div>

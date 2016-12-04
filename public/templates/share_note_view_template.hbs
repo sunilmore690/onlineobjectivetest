@@ -1,0 +1,44 @@
+<div class="modal-dialog ">
+   <div class="modal-content">
+      <button type="button"  class="close btn btn-lg " data-dismiss="modal" aria-hidden="true">
+      </button>                                                                                                                                          
+      <div class="modal-header">
+        <h4>{{subject}}</h4>
+      </div>
+      <div class="modal-body  email-area" >
+         
+         <div class="form-group" style="margin-bottom:60px"> 
+            
+            <div class="col-sm-10 col-xs-10">
+                <input type="text" class="form-control emails"  placeholder="Enter email ids seperated by comma" >
+            </div>
+            <div class="col-sm-2 col-xs-2" style='padding-left:0px'>
+              <button type="button" class="btn btn-primary " id='sharenote' >Send</button>
+            </div>
+            
+
+        </div>
+         <div style="margin-left:40%">
+           <div class="btn-circle" style="background: #bbc3c0;font-weight: 800;padding-top: 8px;">OR</div>
+         </div>
+         <div style="margin-left:40%">
+            <a href="whatsapp://send?text={{sharelink}}" data-action="share/whatsapp/share" style="color:green" class="fa-3x" ><i class="fa fa-whatsapp " aria-hidden="true" style="border-radius:10px"></i></a>
+            
+            <a class="fbtn share facebook fa-3x" href="https://www.facebook.com/sharer/sharer.php?u={{sharelink}}"><i class="fa fa-facebook"></i></a> 
+
+             <a class="fbtn share twitter fa-3x" href="https://twitter.com/intent/tweet?text={{subject}}&amp;url={{sharelink}}&amp;via=creativedevs"><i class="fa fa-twitter"></i></a> 
+             
+         </div>
+         <div class="share-button sharer" style="display: block;">
+          <button type="button" class="btn btn-success share-btn">Share</button>
+          <div class="social top center networks-5 ">
+              <!-- Facebook Share Button -->
+   
+             
+              <!-- LinkedIn Share Button --`>
+              <a class="fbtn share linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{sharelink}}&amp;title={{subject}}&amp;source={{sharelink}}/"><i class="fa fa-linkedin"></i></a>
+          </div>
+      </div>
+      </div>
+   </div>
+</div>
